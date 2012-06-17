@@ -531,7 +531,8 @@ class DictionaryObject(dict, PdfObject):
             value = readObject(stream, pdf)
             if data.has_key(key):
                 # multiple definitions of key not permitted
-                raise utils.PdfReadError, "multiple definitions in dictionary"
+                # raise utils.PdfReadError, "multiple definitions in dictionary"
+                pass
             data[key] = value
         pos = stream.tell()
         s = readNonWhitespace(stream)
